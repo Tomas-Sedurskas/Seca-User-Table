@@ -4,13 +4,14 @@
   "homepage": "https://Tomas-Sedurskas.github.io/Seca-User-Table",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "npm install && ng build --prod",
-    "deploy": "ng build && gh-pages -d dist"
+    "predeploy": "ng build",
+    "deploy": "gh-pages -d dist/user-table"
   },
   "engines": {
     "node": "14.15.4",
