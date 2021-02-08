@@ -5,12 +5,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path')
 const users = require('./routes/users');
-
+const environment = require('./src/environments/environment.prod')
 require('dotenv').config();
 
 app.use(express.json());
 
-const uri = process.env.ATLAS_URI;
+const uri = environment.ATLAS_URI;
 
 // Connect to MongoDB
 mongoose.connect(uri, {
