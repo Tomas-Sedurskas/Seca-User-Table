@@ -5,12 +5,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path')
 const users = require('./routes/users');
-const environment = require('./src/environments/environment.prod')
+
 require('dotenv').config();
 
 app.use(express.json());
 
-const uri = environment.ATLAS_URI;
+const uri = process.env.ATLAS_URI;
 
 // Connect to MongoDB
 mongoose.connect(uri, {
@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://seca-user-table.herokuapp.com/", //https://seca-user-table.herokuapp.com/
+    origin: "http://localhost:4200", //https://seca-user-table.herokuapp.com/
     credentials: true,
   })
 );
@@ -41,7 +41,7 @@ app.use('/', users);
 
 
 app.use( express.static(path.join(__dirname, '/dist/user-table')));
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
    res.sendFile(path.join(__dirname, '/dist/user-table/index.html'));
 });
 
