@@ -29,10 +29,9 @@ connection.once('open', () => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// ADD this url if uploading: https://widget-builder-ba-project.herokuapp.com/
 app.use(
   cors({
-    origin: "https://seca-user-table.herokuapp.com/", // <-- location of the react app were connecting to (http://localhost:3000)
+    origin: "https://seca-user-table.herokuapp.com/", 
     credentials: true,
   })
 );

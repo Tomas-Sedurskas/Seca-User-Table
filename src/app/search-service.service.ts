@@ -16,7 +16,7 @@ export class SearchServiceService {
   }
 
   searchUsers(res: string) {
-    this.http.get<User[]>('http://localhost:5000/', { params: { search: res } })
+    this.http.get<User[]>('https://seca-user-table.herokuapp.com/', { params: { search: res } })
       .subscribe(response => {
       });
   }
