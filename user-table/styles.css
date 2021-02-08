@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+}
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+h1 {
+  display: inline;
+}
+.col {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+#fixed {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  height: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.space-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.margin-bot-small {
+  margin-bottom: 8px;
+}
+.margin-bot-medium {
+  margin-bottom: 16px;
+}
+.margin-bot-large {
+  margin-bottom: 24px;
+}
+.table {
+  margin-top: 0;
+}
+.underline {
+  border-bottom: 1px solid #F7F6FA;
+}
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map*/
