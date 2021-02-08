@@ -16,7 +16,7 @@ export class SearchServiceService {
   }
 
   searchUsers(res: string) {
-    this.http.get<User[]>('/', { params: { search: res } })
+    this.http.get<User[]>('', { params: { search: res } })
       .subscribe(response => {
       });
   }
