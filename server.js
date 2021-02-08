@@ -40,13 +40,12 @@ app.use(
 // Routes
 app.use('/', users);
 
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static(__dirname + 'dist/user-table'));
+app.use(express.static('./dist/user-table'));
 
-  app.get('/*', (req, res) => {
-     res.sendFile(path.join(__dirname+"dist/user-table/index.html" ))
-  });
-}
+app.get('/*', (req, res) => {
+    res.sendFile('index.html', {root: "dist/user-table/" });
+});
+
 
 const port = process.env.PORT || 5000;
 
