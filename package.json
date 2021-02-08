@@ -1,7 +1,7 @@
 {
   "name": "user-table",
   "version": "0.0.0",
-  "homepage": "https://tomas-sedurskas.github.io/Seca-User-Table/",
+
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
