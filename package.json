@@ -1,7 +1,7 @@
 {
   "name": "user-table",
   "version": "0.0.0",
-  "homepage": "https://Tomas-Sedurskas.github.io/Seca-User-Table",
+  "homepage": "https://tomas-sedurskas.github.io/Seca-User-Table/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,8 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "npm install && ng build --prod",
-    "predeploy": "ng build",
-    "deploy": "gh-pages -d dist/user-table"
+    "deploy": "ng build && gh-pages -d dist"
   },
   "engines": {
     "node": "14.15.4",
@@ -59,6 +58,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.2"
-  },
-  "proxy": "http://localhost:5000"
+  }
 }
