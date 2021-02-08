@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const User = require('../models/user.model');
 
-router.get('/', (req, res) => {
+router.get('https://seca-user-table.herokuapp.com/', (req, res) => {
 
     let chunkLimit = 30;
     let chunkStart = Number(req.query.chunk)*chunkLimit;
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
         err ? res.send('No users found.') : res.send(users);
     }).skip(chunkStart).limit(chunkLimit);
 });
-router.get('/search', (req, res) => {
+router.get('https://seca-user-table.herokuapp.com/search', (req, res) => {
     let chunkLimit = 30;
     let chunkStart = 0;
     User.find({'$or':[
