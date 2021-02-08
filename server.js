@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://seca-user-table.herokuapp.com/", 
+    origin: "https://seca-user-table.herokuapp.com", //https://seca-user-table.herokuapp.com/
     credentials: true,
   })
 );
