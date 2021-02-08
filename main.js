@@ -268,14 +268,14 @@ class TableComponent {
         this.lazyLoad();
     }
     getUsers(res) {
-        this.http.get('/', { params: { chunk: res.toString(), search: this.oldSearch } })
+        this.http.get('Seca-User-Table/', { params: { chunk: res.toString(), search: this.oldSearch } })
             .subscribe(response => {
             this.users = [...this.users, ...response];
         });
     }
     searchUsers(res) {
         let ser = res.search;
-        this.http.get('/search', { params: { search: ser.toString() } })
+        this.http.get('Seca-User-Table/search', { params: { search: ser.toString() } })
             .subscribe(response => {
             this.users = [...response];
         });
