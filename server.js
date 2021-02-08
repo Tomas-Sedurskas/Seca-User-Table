@@ -39,10 +39,10 @@ app.use(
 // Routes
 app.use('/', users);
 
-app.use(express.static('./dist/user-table'));
 
+app.use( express.static(path.join(__dirname, '/dist/user-table')));
 app.get('/*', (req, res) => {
-    res.sendFile('index.html', {root: "dist/user-table/" });
+   res.sendFile(path.join(__dirname, '/dist/user-table/index.html'));
 });
 
 
