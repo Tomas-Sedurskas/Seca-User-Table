@@ -1,0 +1,26 @@
+@import "../../sass-variables.scss";
+
+:host{
+    width: 100%;
+}
+.search-bar-wrapper{
+    position: relative;
+}
+.search-bar{
+    background-color: $light-grey;
+    outline: none;
+    border: none;
+    border-radius: $small-radius;
+    padding: 14px 14px 14px 50px;
+    font-size: $medium-font-size;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    
+}
+.search-bar-icon{
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translate(0, -38%);
+}

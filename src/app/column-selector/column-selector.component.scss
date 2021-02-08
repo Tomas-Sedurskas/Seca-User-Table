@@ -1,0 +1,51 @@
+@import "../../sass-variables.scss";
+
+:host {
+  width: 100%;
+}
+.column-selector-wrapper{
+    border: 1px solid $light-grey;
+    border-radius: $small-radius;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.column-selector{
+    background-color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 16px 10px 4px;
+    box-sizing: border-box;
+    width: 100%;
+    appearance:none;
+    background-image: url(../../assets/dropdown-icon.png);
+    background-position: top 50% right 16px;
+    background-repeat: no-repeat;
+    font-weight: 300;
+    font-size: $medium-font-size;
+    position: relative;
+}
+.options{
+    display: none;
+    position: absolute;
+    top: 0;
+    border: 1px solid $light-grey;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 2px 4px 6px $grey;
+    padding: 8px 0;
+}
+.option{
+    cursor: pointer;
+    padding: 6px 16px;
+}
+.option:hover{
+    background-color: $light-grey;
+}
+.column-selector-text{
+    padding: 10px 4px 10px 16px;
+    font-weight: 300;
+    color: $grey;
+}

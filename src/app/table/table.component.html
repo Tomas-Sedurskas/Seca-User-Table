@@ -1,0 +1,65 @@
+<div *ngIf="users.length >= 1">
+
+     <div class="row responsive-table-desktop table-row underline" *ngFor="let user of users">
+        <div class="col">
+            <div class="table-user">
+                {{user.firstName}} {{user.lastName}}
+            </div>
+        </div>
+        <div class="col">
+            
+            <div *ngIf="user.roles.length === 1; else super"> 
+                <div class="tag tag-blue">User</div>
+            </div>
+            <ng-template #super>
+                <div>
+                    <div class="tag tag-purple">Super User</div>
+                </div>
+            </ng-template>
+        </div>
+        <div class="col">
+            <div *ngIf="user.isActive; else offline"> 
+                <div class="tag tag-green">Online</div>
+            </div>
+            <ng-template #offline>
+                <div>
+                    <div class="tag tag-grey">Offline</div>
+                </div>
+            </ng-template>
+        </div>
+        <div class="col">
+            <div class="table-birth-date">
+                {{user.birthDate}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row responsive-table-mobile table-row underline space-between" *ngFor="let user of users">
+        <div class="col">
+            <div class="row space-between margin-bot-small" >
+                <div class="table-user">
+                     {{user.firstName}} {{user.lastName}}
+                </div>
+                <div *ngIf="user.isActive; else offline"> 
+                    <div class="tag tag-green">Online</div>
+                </div>
+                <ng-template #offline>
+                        <div class="tag tag-grey">Offline</div>
+                </ng-template>
+            </div>
+       
+            <div class="row space-between">
+                <div class="table-birth-date">
+                    <span class="table-birth-date-span">Birth Date: </span>{{user.birthDate}}
+                </div>
+                <div *ngIf="user.roles.length === 1; else super"> 
+                    <div class="tag tag-blue">User</div>
+                </div>
+                <ng-template #super>
+                        <div class="tag tag-purple">Super User</div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="intersect-marker"></div>

@@ -1,0 +1,27 @@
+@import '../../sass-variables.scss';
+
+.layout-switch {
+    display: inline-block;
+    border-radius: 4px;
+}
+.layout-switch-button{
+    display: inline;
+    outline: none;
+    border: none;
+    padding: 7px 9px;
+    margin: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+.layout-switch-button-left{
+    border-radius: 4px 0 0 4px;
+    box-shadow: 2px 0px 4px $grey;
+}
+.layout-switch-button-right {
+    border-radius: 0 4px 4px 0;
+    box-shadow: -2px 0px 4px $grey;
+}
+.layout-switch-button-selected{
+    background-color: $light-grey;
+    box-shadow: none;
+}

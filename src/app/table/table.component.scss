@@ -1,0 +1,65 @@
+@import '../../sass-variables.scss';
+
+#intersect-checker{
+    opacity: 0;
+    height: 24px;
+    width: 100%;
+}
+.table-row{
+    padding: 12px 32px;
+    box-sizing: border-box;
+}
+.table-row:nth-child(odd) {
+  background-color: $light-grey;
+}
+.tag{
+    text-align: center;
+    border-radius: $small-radius;
+    font-weight: 700;
+    font-size: $small-font-size;
+    padding: 2px 12px;
+    margin-left: 0px;
+    display: inline;
+}
+.tag-green{
+    background-color: $light-green;
+    color: $green;
+}
+.tag-blue{
+    background-color: $light-blue;
+    color: $blue;
+}
+.tag-purple{
+    background-color: $light-purple;
+    color: $purple;
+}
+.tag-grey {
+  background-color: $light-grey;
+  color: $grey;
+}
+.table-user{
+    display: block;
+    font-weight: 700;
+}
+.table-birth-date-span{
+    color: $grey
+}
+.responsive-table-mobile{
+  display: none;
+}
+.responsive-table-desktop {
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .tag{
+        margin-left: 6px;
+    }
+    .responsive-table-desktop{
+        display: none;
+    }
+    .responsive-table-mobile {
+      display: flex;
+    }
+}

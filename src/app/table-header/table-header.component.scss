@@ -1,0 +1,12 @@
+@import '../../sass-variables.scss';
+
+.table-header{
+    display: flex;
+    padding: 16px 32px; 
+}
+
+@media (max-width: 768px) {
+    .table-header {
+        display: none;
+    }   
+}
