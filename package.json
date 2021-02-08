@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "npm install && ng build --prod",
-    "deploy": "ng build && gh-pages -d dist"
+    "deploy": "ng build && gh-pages -d dist/user-table"
   },
   "engines": {
     "node": "14.15.4",

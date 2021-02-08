@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://tomas-sedurskas.github.io/Seca-User-Table/", //https://seca-user-table.herokuapp.com/
+    origin: "https://seca-user-table.herokuapp.com", //https://seca-user-table.herokuapp.com/
     credentials: true,
   })
 );
@@ -41,7 +41,7 @@ app.use('/', users);
 
 
 app.use( express.static(path.join(__dirname, '/dist/user-table')));
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
    res.sendFile(path.join(__dirname, '/dist/user-table/index.html'));
 });
 
