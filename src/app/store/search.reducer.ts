@@ -2,7 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 import { SEARCH } from './search.actions';
 
 export const initialState = {
-    search: ''
+    search: ""
 };
 
 const _searchReducer = createReducer(

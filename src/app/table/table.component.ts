@@ -45,16 +45,19 @@ export class TableComponent implements OnInit {
     this.lazyLoad();
   }
   getUsers(res: number) {
-    this.http.get<User[]>('/', { params: { chunk: res.toString(), search: this.oldSearch } })
+    console.log(res)
+    this.http.get<User[]>('https://seca-user-table.herokuapp.com/', { params: { chunk: res.toString(), search: this.oldSearch } })
       .subscribe(response => {
+        console.log(response)
         this.users = [...this.users, ...response];
       });
   }
   searchUsers(res: string) {
     
     let ser = res.search
-    this.http.get<User[]>('/search', { params: { search: ser.toString() } })
+    this.http.get<User[]>('https://seca-user-table.herokuapp.com/search', { params: { search: ser.toString() } })
       .subscribe(response => {
+        console.log(response)
         this.users = [...response];
       });
   }
