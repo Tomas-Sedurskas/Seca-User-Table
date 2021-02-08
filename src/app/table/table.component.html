@@ -1,5 +1,4 @@
-<div *ngIf="users.length >= 1">
-
+<div *ngIf="users.length >= 1; else noUsers">
      <div class="row responsive-table-desktop table-row underline" *ngFor="let user of users">
         <div class="col">
             <div class="table-user">
@@ -62,4 +61,12 @@
         </div>
     </div>
 </div>
+
+<ng-template #noUsers>
+    <div class="row responsive-table-desktop table-row">
+        <p>No users were found...</p>
+        <button (click)="getUsers(1)">Look again.</button>
+    </div>
+</ng-template>
+
 <div id="intersect-marker"></div>
